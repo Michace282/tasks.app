@@ -54,19 +54,19 @@
                 if ($_POST['type'] === 'create') {
                     $datasave->insert($_POST['email'], $_POST['descr'], $_POST['perf']);
                     echo '<div class="alert alert-info" role="alert">
-                        Добавлена новая задача.</div>';
+                        Добавлена новая задача. Обновите страницу!</div>';
                 }
                 //update
                 if ($_POST['type'] === 'update') {
                     $datasave->update($_POST['id'], $_POST['email'], $_POST['descr'], $_POST['perf']);
                     echo '<div class="alert alert-info" role="alert">
-                         Обновлена задача №'.$_POST['id'].'.</div>';   
+                         Обновлена задача №'.$_POST['id'].'. Обновите страницу!</div>';   
                 }
                 //delete 
                 if (isset($_GET['del_id'])) {
                     $datasave->delete($_GET['del_id']);
                     echo '<div class="alert alert-danger" role="alert">
-                         Удалена задача №'.$_GET['del_id'].'.</div>';
+                         Удалена задача №'.$_GET['del_id'].'. Обновите страницу!</div>';
                 }
 
             ?>
